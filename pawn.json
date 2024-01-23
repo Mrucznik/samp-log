@@ -1,0 +1,30 @@
+{
+    "user": "gumbalowsky",
+    "repo": "samp-log",
+    "resources": [
+        {
+            "name": "^log-plugin-(.*)-[Ll]inux.tar.gz$",
+            "platform": "linux",
+            "archive": true,
+            "includes": ["log-plugin-0.4-Linux/pawno/include"],
+            "plugins": ["log-plugin-0.4-Linux/plugins/log-plugin.so"],
+            "files": {
+                "log-plugin-0.4-Linux/log-core.so": "log-core.so"
+            }
+        },
+        {
+            "name": "^log-plugin-(.*)-win32.zip$",
+            "platform": "windows",
+            "archive": true,
+            "includes": ["log-plugin-0.4-win32/pawno/include"],
+            "plugins": ["log-plugin-0.4-win32/plugins/log-plugin.dll"],
+            "files": {
+                "log-plugin-0.4-win32/log-core.dll": "log-core.dll"
+            }
+        }
+    ],
+    "contributors": ["maddinat0r"],
+    "runtime": {
+        "plugins": ["gumbalowsky/samp-log"]
+    }
+}
